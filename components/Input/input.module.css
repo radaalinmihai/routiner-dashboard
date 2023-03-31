@@ -1,0 +1,11 @@
+.input {
+    @apply border-none outline-none w-full h-full pl-2 placeholder-transparent;
+}
+
+.inputWrapper {
+    @apply px-2 py-1 border-2 border-gray-700 relative bg-gray-50 rounded-md;
+
+    & label {
+        @apply absolute left-1 -top-4 text-gray-200 text-sm transition-all cursor-text;
+    }
+}

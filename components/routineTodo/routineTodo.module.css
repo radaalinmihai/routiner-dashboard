@@ -1,0 +1,14 @@
+.todo {
+    @apply px-4 py-1 flex flex-row justify-between;
+    & small {
+        @apply text-[#5E5E5E] text-base;
+    }
+}
+
+.title {
+    @apply text-xl;
+}
+
+.participants {
+    @apply flex flex-row items-center;
+}

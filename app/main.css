@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html {
+    @apply min-h-[100vh];
+}
+
+body, html, button, input {
+    font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+    @apply flex flex-row flex-1 min-h-[inherit];
+    &-content {
+        @apply w-full bg-gray-body;
+    }
+}
+
+.navbar {
+    @apply bg-gray-layout;
+}
+
+.sidebar {
+    @apply w-1/6 bg-gray-layout flex flex-col items-center;
+    &-wrapper {
+        @apply pt-4 space-y-3;
+        &--item {
+            font-size: 1.12rem;
+        }
+    }
+}
+
+.wrapper, .navbar, .sidebar {
+    @apply text-white;
+}

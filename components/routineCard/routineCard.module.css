@@ -1,0 +1,7 @@
+.card {
+    @apply rounded-[6px] bg-[#343434] p-1 drop-shadow-xl min-w-[30rem] min-h-[20rem];
+}
+
+.cardHeader {
+    @apply py-2 px-3 border-b border-white;
+}

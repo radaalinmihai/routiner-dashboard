@@ -1,0 +1,3 @@
+.form {
+    @apply flex flex-col max-w-xl space-y-4;
+}
