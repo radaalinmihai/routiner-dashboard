@@ -1,0 +1,28 @@
+#__next {
+    @apply min-h-full min-w-full;
+}
+
+.wrapper {
+    @apply h-full flex flex-row;
+    &-content {
+        @apply w-full bg-gray-body;
+    }
+}
+
+.navbar {
+    @apply bg-gray-layout;
+}
+
+.sidebar {
+    @apply w-1/4 bg-gray-layout flex flex-col items-center;
+    &-wrapper {
+        @apply pt-4;
+        &--item {
+            font-size: 1.12rem;
+        }
+    }
+}
+
+.wrapper, .navbar, .sidebar {
+    @apply text-white;
+}
