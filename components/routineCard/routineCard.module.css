@@ -1,7 +1,12 @@
 .card {
-    @apply rounded-[6px] bg-[#343434] p-1 drop-shadow-xl min-w-[30rem] min-h-[20rem];
+    border-radius: 6px;
+    background: #343434;
+    padding: 0.8rem;
+    filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+    min-width: 30rem;
+    min-height: 20rem;
 }
 
 .cardHeader {
-    @apply py-2 px-3 border-b border-white;
+    border-bottom: 1px solid white;
 }

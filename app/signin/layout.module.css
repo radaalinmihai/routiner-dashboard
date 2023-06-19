@@ -1,3 +1,7 @@
 .layout {
-    @apply bg-gray-body min-h-screen flex justify-center items-center;
+    background: gray;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

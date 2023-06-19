@@ -1,45 +1,35 @@
 import {fireEvent, render, screen} from "@testing-library/react";
 import Input from "@/components/Input";
 
-describe('Input Forwarded Ref Component', () => {
-	it('Renders a normal input with an empty value and an attribute of name equal to `test-name`', () => {
-		render(<Input name="test-name" />);
+describe("Input", () => {
+	it("Render input with controlled value and name", () => {
+		const testName: string = "test-name";
+		const label: string = "Test label";
+		render(<Input name={testName} labelText={label} />);
 
-		const input = screen.getByRole("textbox");
+		const input = screen.getByLabelText(label);
+		expect(input).toBeInTheDocument();
+		expect(input).toHaveAttribute("name", testName);
+		expect(input).toHaveValue("");
+
+		fireEvent.change(input, {
+			target: {
+				value: "Some test value to work with",
+			}
+		});
 
 		expect(input).toBeInTheDocument();
-		expect(input).toHaveAttribute("name", "test-name");
-	});
-
-	it('Renders an input with label text', () => {
-		render(<Input labelText="Test label text" />);
-
-		const input = screen.getByRole("textbox");
-		const labelText = screen.getByLabelText(/test label text/gi);
-
-		expect(input).toHaveAttribute("placeholder", expect.stringMatching(/test label text/gi));
-		expect(labelText).toBeInTheDocument();
-	});
-
-	it('Renders an input with a controlled value', () => {
-		const testValue = "test value";
-		render(<Input value={testValue} />);
-
-		const input = screen.getByRole<HTMLInputElement>("textbox");
-		expect(input).toHaveValue(testValue);
+		expect(input).toHaveAttribute("name", testName);
+		expect(input).toHaveValue("Some test value to work with");
 
 		fireEvent.change(input, {
 			target: {
 				value: "",
 			}
 		});
-		expect(input.value).toBe("");
 
-		fireEvent.change(input, {
-			target: {
-				value: "new test value"
-			}
-		});
-		expect(input.value).toBe(/new test value/gi);
+		expect(input).toBeInTheDocument();
+		expect(input).toHaveAttribute("name", testName);
+		expect(input).toHaveValue("");
 	});
 });

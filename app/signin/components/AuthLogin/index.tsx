@@ -1,11 +1,12 @@
 "use client";
-import {FormProvider, SubmitHandler, useForm} from "react-hook-form";
-import {makeRequest} from "@/utils/makeRequest";
+import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
+
 import styles from "@/app/signin/page.module.css";
-import FormInput from "@/components/Form/FormInput";
 import Button from "@/components/Button";
-import {ILoginData} from "@/interfaces/IForm";
-import {setAccessToken} from "@/utils/cookies";
+import FormInput from "@/components/Form/FormInput";
+import { ILoginData } from "@/interfaces/IForm";
+import { setAccessToken } from "@/utils/cookies";
+import { makeRequest } from "@/utils/makeRequest";
 
 interface IFormValues {
 	email: string;
@@ -19,9 +20,9 @@ export default function AuthLogin() {
 			password: "",
 		}
 	});
-	const {handleSubmit} = methods;
+	const { handleSubmit } = methods;
 
-	const onSignIn: SubmitHandler<IFormValues> = async ({email, password}) => {
+	const onSignIn: SubmitHandler<IFormValues> = async ({ email, password }) => {
 		try {
 			const response = await makeRequest<ILoginData>({
 				url: "/auth/login",

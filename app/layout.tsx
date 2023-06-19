@@ -1,7 +1,8 @@
-import {ReactNode} from "react";
 import "./main.css";
 
-export default function RootLayout({children}: {children: ReactNode}) {
+import { ReactNode } from "react";
+
+export default function RootLayout({ children }: {children: ReactNode}) {
 	return (
 		<html lang="en">
 			<head>

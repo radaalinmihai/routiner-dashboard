@@ -1,22 +1,30 @@
 #__next {
-    @apply min-h-full min-w-full;
+    min-height: 100%;
+    min-width: 100%;
 }
 
 .wrapper {
-    @apply h-full flex flex-row;
+    display: flex;
+    height: 100%;
+    flex-direction: row;
     &-content {
-        @apply w-full bg-gray-body;
+        width: 100%;
+        background: gray;
     }
 }
 
 .navbar {
-    @apply bg-gray-layout;
+    background: gray;
 }
 
 .sidebar {
-    @apply w-1/4 bg-gray-layout flex flex-col items-center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    background: gray;
     &-wrapper {
-        @apply pt-4;
+        padding: 1.2rem;
         &--item {
             font-size: 1.12rem;
         }
@@ -24,5 +32,5 @@
 }
 
 .wrapper, .navbar, .sidebar {
-    @apply text-white;
+    color: white;
 }

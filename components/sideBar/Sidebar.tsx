@@ -1,6 +1,5 @@
-import type {FC} from "react";
-import Link from "next/link";
-import MdIcon from "@/components/MdIcon";
+import type { FC } from "react";
+
 import NavLink from "@/components/sideBar/NavLink";
 
 const Sidebar: FC = () => {

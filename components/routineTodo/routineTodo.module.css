@@ -1,14 +1,19 @@
 .todo {
-    @apply px-4 py-1 flex flex-row justify-between;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     & small {
-        @apply text-[#5E5E5E] text-base;
+        color: #5E5E5E;
+        font-size: 1rem;
     }
 }
 
 .title {
-    @apply text-xl;
+    font-size: 1.25rem;
 }
 
 .participants {
-    @apply flex flex-row items-center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }

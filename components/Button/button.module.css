@@ -1,7 +1,30 @@
-.baseButton {
-    @apply text-white bg-white;
+.base {
+    color: black;
+    background: var(--base-button-background);
+    border-radius: .5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 1.125rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.125rem;
+    min-width: 22.563rem;
+
+    &.loading {
+        vertical-align: middle;
+    }
+}
+
+.loader {
+    width: 40px;
+    height: 40px;
+    border-width: 3px;
 }
 
 .primaryButton {
-
+    background: var(--primary-button-background);
 }

@@ -1,5 +1,6 @@
-import RoutineCard from "@/components/routineCard";
 import "@/components/routineCard/routineCard.module.css"
+
+import RoutineCard from "@/components/routineCard";
 
 export default function Home() {
 	return (

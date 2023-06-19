@@ -1,36 +1,33 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Inputs */
+    --primary-input-background: rgba(228, 228, 228, 0.54);;
+    --primary-input-shadow: 0px 4px 4px 0px #00000040;
+    --primary-input-border: #1F1F1F;
+    --primary-input-background-focused: #E4E4E4;
+    --primary-input-border-active: rgb(var(--primary-color));
+
+    /* Buttons */
+    --base-button-background: #D9D9D9;
+    --base-button-clicked-background: rgba(217, 217, 217, .5);
+    --primary-button-background: rgb(var(--primary-color));
+    --primary-button-clicked-background: rgba(var(--primary-color), .5);
+
+
+    /* General */
+    --primary-color: 69, 208, 158;
+    --page-background-color: rgba(52, 52, 52, 1);
+}
 
 body, html {
-    @apply min-h-[100vh];
+    background-color: var(--page-background-color);
+    min-height: 100vh;
+    margin: 0;
 }
 
 body, html, button, input {
     font-family: "Roboto", sans-serif;
-}
-
-.wrapper {
-    @apply flex flex-row flex-1 min-h-[inherit];
-    &-content {
-        @apply w-full bg-gray-body;
-    }
-}
-
-.navbar {
-    @apply bg-gray-layout;
-}
-
-.sidebar {
-    @apply w-1/6 bg-gray-layout flex flex-col items-center;
-    &-wrapper {
-        @apply pt-4 space-y-3;
-        &--item {
-            font-size: 1.12rem;
-        }
-    }
-}
-
-.wrapper, .navbar, .sidebar {
-    @apply text-white;
 }
