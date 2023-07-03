@@ -1,6 +1,6 @@
 .base {
     color: black;
-    background: var(--base-button-background);
+    background: rgb(var(--base-button-background));
     border-radius: .5rem;
     border: none;
     cursor: pointer;
@@ -14,7 +14,12 @@
     min-height: 3.125rem;
     min-width: 22.563rem;
 
+    &:hover {
+        background: rgba(var(--base-button-background), var(--button-hover-opacity));
+    }
+
     &.loading {
+        background: rgba(var(--base-button-background), var(--button-hover-opacity));
         vertical-align: middle;
     }
 }
@@ -27,4 +32,8 @@
 
 .primaryButton {
     background: var(--primary-button-background);
+
+    &:hover {
+        background: rgba(var(--primary-color), var(--button-hover-opacity));
+    }
 }

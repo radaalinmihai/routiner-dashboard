@@ -1,8 +1,9 @@
-import {fireEvent, render, screen} from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
+
 import SignInPage from "@/app/signin/page";
 
 beforeEach(() => {
-	const {debug} = render(<SignInPage />);
+	const { debug } = render(<SignInPage />);
 });
 
 describe("Sign In", () => {

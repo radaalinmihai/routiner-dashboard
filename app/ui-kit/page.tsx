@@ -2,6 +2,7 @@
 import Button from "@/components/Button";
 import Input from "@/components/Input";
 import Loading from "@/components/Loading";
+import RadioButton from "@/components/RadioButton";
 import { ButtonType } from "@/interfaces/IButton";
 
 import styles from "./styles.module.css";
@@ -31,6 +32,13 @@ export default function UiKitPage() {
 			<h2>Loader</h2>
 			<section>
 				<Loading />
+			</section>
+			<h2>Radio</h2>
+			<section>
+				<RadioButton name="test-input" option={{
+					label: "Test",
+					value: "test1111",
+				}} />
 			</section>
 		</div>
 	);
